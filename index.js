@@ -77,7 +77,7 @@ app.get('/fetch', async (req, res) => {
       ${css}
       <div class="container">
         <h2>Response from ${targetUrl}:</h2>
-        <pre>${response.data}</pre>
+        <pre>${JSON.stringify(response.data, null, 2)}</pre>
       </div>
     `);
   } catch (err) {
